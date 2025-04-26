@@ -1,0 +1,247 @@
+.contact, .nav-contact {
+  background-color: #090910;
+
+}
+.nav-contact {
+  width: 92%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contact {
+  margin-top: 100px;
+  min-height: 100vh;
+}
+.add-contact button{
+  background-color: #dd5313;
+  margin-top: 0px;
+}
+.nav-contact {
+  display: flex; /* Sử dụng Flexbox để chia phần tử thành các cột */
+  justify-content: space-between; /* Đảm bảo hai phần nằm cách nhau */
+  align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+  padding: 30px;
+}
+
+.nav-contact-left {
+  flex: 1; /* Phần này chiếm không gian còn lại */
+  display: flex;
+  justify-content: flex-start; /* Căn phần tử về bên trái */
+}
+
+.contact-filters {
+  flex: 1; /* Phần này chiếm không gian còn lại */
+  display: flex;
+  flex-wrap: wrap; /* Đảm bảo các phần tử không vượt quá chiều ngang */
+  gap: 15px;
+  justify-content: flex-start; /* Căn các phần tử bên trái trong contact-filters */
+}
+
+.contact-filters h3 {
+  margin-right: 20px;
+  color: #f8f9fa;
+  margin-bottom: 0;
+  width: 100%; /* Đảm bảo tiêu đề chiếm chiều rộng đầy đủ */
+}
+
+.contact-filters form {
+  display: flex;
+  flex-wrap: wrap; /* Cho phép các phần tử trong form xuống hàng */
+  gap: 15px;
+  width: 100%;
+  justify-content: flex-start; /* Căn các phần tử bên trái trong form */
+}
+
+.contact-filters div {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  max-width: 100%;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  height: 40px;
+}
+
+.contact-filters label {
+  color: #f8f9fa;
+  margin-bottom: 5px;
+  font-size: 0.9em;
+}
+
+.contact-filters input[type="email"],
+.contact-filters input[type="date"],
+.contact-filters input[type="text"],
+.contact-filters select {
+  padding: 0px 15px;
+  width: 100%; /* Chiếm 100% chiều rộng của div */
+  border: 1px solid #555;
+  border-radius: 5px;
+  background-color: #444e5e;
+  color: #f8f9fa;
+  transition: background-color 0.3s ease;
+}
+
+.contact-filters input[type="email"]:hover,
+.contact-filters input[type="date"]:hover,
+.contact-filters input[type="text"]:hover,
+.contact-filters select:hover {
+  background-color: #3b4553;
+}
+
+.contact-filters button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-filters button:hover {
+  background-color: #218838;
+}
+
+.contact-list {
+  margin-bottom: 30px;
+  margin-top: 50px;
+  background-color: #333d4d;
+  padding: 15px;
+  border-radius: 8px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-list h3 {
+  color: #f8f9fa;
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #555;
+  padding-bottom: 10px;
+}
+
+.contact-list table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #f8f9fa;
+}
+
+.contact-list th,
+.contact-list td {
+  border: 1px solid #555;
+  padding: 10px;
+  text-align: left;
+}
+
+.contact-list th {
+  background-color: #444e5e;
+  font-weight: bold;
+}
+
+.contact-list tbody tr:nth-child(even) {
+  background-color: #444e5e;
+}
+
+.contact-list button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  font-size: 0.9em;
+  margin-right: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-list button:hover {
+  background-color: #0056b3;
+}
+
+.contact-list button:last-child {
+  background-color: #dc3545;
+}
+
+.contact-list button:last-child:hover {
+  background-color: #c82333;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #333d4d;
+  padding: 20px;
+  border-radius: 8px;
+  width: 500px;
+  color: #f8f9fa;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #555;
+  padding-bottom: 10px;
+}
+
+.modal-content form > div {
+  margin-bottom: 15px;
+}
+
+.modal-content form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 0.9em;
+}
+
+.modal-content form input[type="text"],
+.modal-content form input[type="email"],
+.modal-content form input[type="date"],
+.modal-content form select {
+  width: 95%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background-color: #444e5e;
+  color: #f8f9fa;
+}
+
+.modal-content form button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-right: 10px;
+}
+
+.modal-content form button[type="submit"] {
+  background-color: #28a745;
+  color: white;
+  border: none;
+}
+
+.modal-content form button[type="button"] {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+}
+
+.modal-content form button:hover {
+  opacity: 0.9;
+}
